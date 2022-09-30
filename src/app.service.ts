@@ -19,7 +19,7 @@ export class AppService {
         {},
         {
           headers: {
-            Authorization: `Bearer sk_live_9chIoAfCklgfjS2-W5QktuKQr94X7JdZazQvYT-40o8`,
+            Authorization: `Bearer ${process.env.HB_TOKEN}`,
           },
         },
       );
