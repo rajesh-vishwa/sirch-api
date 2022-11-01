@@ -16,7 +16,14 @@ export class AppService {
     try {
       const resp = await apiClient.post<HBResponse>(
         '/v0/vm',
-        { kiosk: true, hide_cursor: true, ublock: true },
+        {
+          kiosk: true,
+          hide_cursor: true,
+          ublock: true,
+          fps: 60,
+          width: 1920,
+          height: 1080,
+        },
         {
           headers: {
             Authorization: `Bearer ${process.env.HB_TOKEN}`,
